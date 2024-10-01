@@ -33,9 +33,9 @@ AVAILABLE_STREAM_ACCESSORS = [
     # FolderDataAccessObject,
     # ListDataAccessObject,
     # ListSendDataAccessObject,
-    # ListSubscriberDataAccessObject,
+    ListSubscriberDataAccessObject,
     # SendDataAccessObject,
-    # SubscriberDataAccessObject,
+    SubscriberDataAccessObject,
 ]
 
 
