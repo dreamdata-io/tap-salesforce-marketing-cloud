@@ -33,7 +33,7 @@ AVAILABLE_STREAM_ACCESSORS = [
     # FolderDataAccessObject,
     # ListDataAccessObject,
     # ListSendDataAccessObject,
-    ListSubscriberDataAccessObject,
+    # ListSubscriberDataAccessObject,
     # SendDataAccessObject,
     SubscriberDataAccessObject,
 ]
@@ -86,13 +86,6 @@ def do_sync(args):
         # will only sync records of subscribers that are present in the list.
         # Hence, for different start dates the 'SubscriberKey' list will differ and
         # thus 'subscribers' records will also be different for different start dates.
-        if SubscriberDataAccessObject.matches_catalog(stream_catalog):
-            subscriber_selected = True
-            subscriber_catalog = stream_catalog
-            LOGGER.info(
-                "'subscriber' selected, will replicate via " "'list_subscriber'"
-            )
-            continue
 
         if ListSubscriberDataAccessObject.matches_catalog(stream_catalog):
             list_subscriber_selected = True

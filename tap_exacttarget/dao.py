@@ -60,8 +60,8 @@ def exacttarget_error_handling(fnc):
         backoff.expo,
         urllib.error.URLError,  # backoff 'timeout' error for SOAP API
         giveup=is_timeout_error,
-        max_tries=5,
-        factor=2,
+        max_tries=10,
+        factor=3,
     )
     @backoff.on_exception(
         backoff.expo,
